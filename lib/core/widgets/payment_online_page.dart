@@ -3,7 +3,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../../core/constants/constants.dart';
 import '../../../../core/helper_function/navigation.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../helper_function/api.dart';
 
 class PaymentOnlinePage extends StatefulWidget {

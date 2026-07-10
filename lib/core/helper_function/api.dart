@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jwt_decode/jwt_decode.dart';
 import 'package:provider/provider.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../constants/constants.dart';
 import '../models/progress_provider.dart';
 import 'convert.dart';

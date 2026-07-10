@@ -3,7 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../helper_function/image.dart';
 
 class UploadMultiImageWidget extends StatelessWidget {

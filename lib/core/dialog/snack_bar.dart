@@ -1,7 +1,7 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../Theme/app_theme.dart';
 import '../constants/constants.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -40,7 +40,7 @@ void showToast(
       ),
       child: AwesomeSnackbarContent(
         inMaterialBanner: true,
-        title: LanguageProvider.translate('error', title ?? 'error'),
+        title: LanguageProvider.translate('global', title ?? 'error'),
         message: text.replaceAll(
           '\n',
           "\n----------------------------------------------\n",

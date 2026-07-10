@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants/constants.dart';
 import 'app_color.dart';
 import 'app_text_styles.dart';
 import 'app_system_ui.dart';
@@ -10,6 +11,7 @@ final AppBarTheme lightAppBarTheme = AppBarTheme(
   iconTheme: IconThemeData(color: Colors.black), // or ColorScheme.onPrimary
   titleTextStyle: AppTextStyles.title.copyWith(
     color: Colors.black, // or context.colors.onPrimary
+    fontFamily: Constants.appFontFamily,
   ),
   systemOverlayStyle: AppSystemUi.light(),
   surfaceTintColor: AppColor.scaffoldBackgroundColor,
@@ -22,6 +24,7 @@ final AppBarTheme darkAppBarTheme = AppBarTheme(
   iconTheme: IconThemeData(color: Colors.white), // or ColorScheme.onPrimary
   titleTextStyle: AppTextStyles.title.copyWith(
     color: Colors.white, // or context.colors.onPrimary
+    fontFamily: Constants.appFontFamily,
   ),
   systemOverlayStyle: AppSystemUi.dark(),
 );

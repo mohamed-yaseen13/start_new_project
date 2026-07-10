@@ -9,7 +9,7 @@ class CustomBottomNavBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 48.h, top: 12.h),
+      padding: EdgeInsets.only(bottom: 10.h, top: 12.h),
       child: Column(mainAxisSize: MainAxisSize.min, children: [child]),
     );
   }

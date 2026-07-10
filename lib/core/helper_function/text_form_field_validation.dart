@@ -1,4 +1,5 @@
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
+import 'extensions.dart';
 
 final RegExp emailValid = RegExp(
   r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
@@ -14,6 +15,13 @@ String? validateEstateRooms(String? value) {
 String? validateEstateName(String? value) {
   if (value!.isEmpty) {
     return LanguageProvider.translate("validation", "estate_name");
+  }
+  return null;
+}
+
+String? validateBalance(String? value) {
+  if (value.isNullOrEmpty() || double.parse(value!) <= 0) {
+    return LanguageProvider.translate("validation", "balance");
   }
   return null;
 }

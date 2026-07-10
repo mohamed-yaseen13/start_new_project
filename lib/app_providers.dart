@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'core/Theme/theme_provider.dart';
 import 'core/models/progress_provider.dart';
-import 'features/language/presentation/provider/language_provider.dart';
+import 'features/language/presentation/providers/language_provider.dart';
 import 'features/onboarding/presentation/providers/onboarding_provider.dart';
 import 'features/splash_screen/presentation/providers/splash_provider.dart';
 

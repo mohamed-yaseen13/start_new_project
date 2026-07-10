@@ -4,7 +4,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/helper_function/navigation.dart';
-import '../../../features/language/presentation/provider/language_provider.dart';
+import '../../../features/language/presentation/providers/language_provider.dart';
 import '../../Theme/app_system_ui.dart';
 import '../../Theme/app_theme.dart';
 import '../../constants/constants.dart';

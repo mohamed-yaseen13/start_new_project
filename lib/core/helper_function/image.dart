@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../Theme/app_theme.dart';
 import '../constants/constants.dart';
 import '../dialog/snack_bar.dart';

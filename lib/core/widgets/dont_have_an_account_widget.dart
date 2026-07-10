@@ -1,20 +1,30 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../Theme/app_theme.dart';
-// import 'package:provider/provider.dart';
 
 class DontHaveAnAccountWidget extends StatelessWidget {
-  const DontHaveAnAccountWidget({super.key});
+  final VoidCallback onTap;
+
+  const DontHaveAnAccountWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        // context.read<SignupProvider>().goTo();
-      },
-      child: Text(
-        LanguageProvider.translate('login', 'dont_have_an_account'),
-        style: context.text.bodyMedium,
+    return RichText(
+      text: TextSpan(
+        children: [
+          TextSpan(
+            text: LanguageProvider.translate('auth', 'dont_have_an_account'),
+            style: context.text.bodyMedium,
+          ),
+          TextSpan(
+            text: LanguageProvider.translate('auth', 'signup'),
+            style: context.text.bodyMedium!.copyWith(
+              color: context.colors.primary,
+            ),
+            recognizer: TapGestureRecognizer()..onTap = onTap,
+          ),
+        ],
       ),
     );
   }

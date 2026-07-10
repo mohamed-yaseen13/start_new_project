@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 
 class EmptyAnimationWidget extends StatelessWidget {
   const EmptyAnimationWidget({
@@ -33,12 +33,7 @@ class EmptyAnimationWidget extends StatelessWidget {
             style: textTheme.bodyMedium?.copyWith(color: colors.onSurface),
           ),
         SizedBox(height: .01.sh),
-        Lottie.asset(
-          gif,
-          fit: BoxFit.cover,
-          width: width,
-          height: height,
-        ),
+        Lottie.asset(gif, fit: BoxFit.cover, width: width, height: height),
         SizedBox(height: .01.sh),
         if (aboveText == null)
           Text(

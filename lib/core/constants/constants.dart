@@ -8,7 +8,8 @@ class Constants {
   static const String domain = '${baseUri}api/';
   //! for navigation
   static final GlobalKey<NavigatorState> navState = GlobalKey<NavigatorState>();
-  static final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
+  static final RouteObserver<PageRoute> routeObserver =
+      RouteObserver<PageRoute>();
 
   static bool isTablet = false;
 
@@ -16,4 +17,5 @@ class Constants {
     return navState.currentContext!;
   }
 
+  static const String appFontFamily = 'Inter';
 }

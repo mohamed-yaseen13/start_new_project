@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../constants/constants.dart';
 import 'app_bar_themes.dart';
 import 'app_color.dart';
 import 'app_text_styles.dart';
@@ -19,7 +20,7 @@ class AppTheme {
     useMaterial3: true,
     brightness: Brightness.light,
 
-    fontFamily: "DIN",
+    fontFamily: Constants.appFontFamily,
 
     colorScheme: ColorScheme.light(
       primary: AppColor.primaryColor,
@@ -63,7 +64,7 @@ class AppTheme {
     useMaterial3: true,
     brightness: Brightness.dark,
 
-    fontFamily: "DIN",
+    fontFamily: Constants.appFontFamily,
 
     colorScheme: const ColorScheme.dark().copyWith(
       primary: AppColor.primaryColor,

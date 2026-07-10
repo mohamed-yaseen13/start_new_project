@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../Theme/app_color.dart';
 import '../constants/constants.dart';
 import 'package:time_machine/time_machine.dart' as time;
@@ -56,10 +56,10 @@ String convertDateToStringYMD(DateTime dateTime) {
 }
 
 String checkDateIfNull(dynamic dateTime) {
-  return dateTime == "null" || dateTime == null ? "" : convertDateTimeToString(dateTime);
+  return dateTime == "null" || dateTime == null
+      ? ""
+      : convertDateTimeToString(dateTime);
 }
-
-
 
 // sunday GET DAY NAME
 String getDayNameFromDate(DateTime dateTime) {
@@ -142,7 +142,7 @@ int? convertStringToIntNull(dynamic value) {
 }
 
 num convertDataToNum(dynamic value) {
-  if(value == null){
+  if (value == null) {
     return 0;
   }
   if (value is num) {
@@ -154,7 +154,7 @@ num convertDataToNum(dynamic value) {
 }
 
 num? convertDataToNumNull(dynamic value) {
-  if(value == null){
+  if (value == null) {
     return null;
   }
   if (value is num) {
@@ -176,6 +176,7 @@ double convertDataToDouble(dynamic value) {
     return value;
   }
 }
+
 double? convertDataToDoubleNull(dynamic value) {
   if (value == null) {
     return null;
@@ -218,6 +219,7 @@ bool convertDataToBool(dynamic data) {
     return data;
   }
 }
+
 bool? convertDataToBoolNull(dynamic data) {
   if (data == null) {
     return null;
@@ -385,16 +387,18 @@ String formatNumber(num number) {
   }
 }
 
-
-String convertTwoDateRange({required DateTime fromDate,required DateTime toDate}) {
-  String language = Provider.of<LanguageProvider>(Constants.globalContext()).appLocal.languageCode;
+String convertTwoDateRange({
+  required DateTime fromDate,
+  required DateTime toDate,
+}) {
+  String language = Provider.of<LanguageProvider>(
+    Constants.globalContext(),
+  ).appLocal.languageCode;
   String formattedDateRange = fromDate.year == toDate.year
-      ? "${DateFormat('dd MMMM', 'ar').format(fromDate)} - ${DateFormat('dd MMMM ,yyyy',language).format(toDate)}"
+      ? "${DateFormat('dd MMMM', 'ar').format(fromDate)} - ${DateFormat('dd MMMM ,yyyy', language).format(toDate)}"
       : "${DateFormat('dd MMMM ,yyyy', 'ar').format(fromDate)} - ${DateFormat('dd MMMM ,yyyy', language).format(toDate)}";
   return formattedDateRange;
 }
-
-
 
 Color hexToColor(String code) {
   if (int.tryParse('0xFF$code') != null) {
@@ -411,16 +415,12 @@ int convertToSeconds(String time) {
   return (minutes * 60) + seconds;
 }
 
-
 bool convertStringToBool({required String data}) {
   if (data == "true") {
     return true;
   }
   return false;
 }
-
-
-
 
 String formatPrice(num price) {
   if (price > 1000000) {

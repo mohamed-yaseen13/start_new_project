@@ -10,7 +10,7 @@ import 'core/helper_function/api.dart';
 import 'core/helper_function/notifications.dart';
 import 'core/helper_function/prefs.dart';
 import 'core/models/local_notifications.dart';
-import 'features/language/presentation/provider/language_provider.dart';
+import 'features/language/presentation/providers/language_provider.dart';
 // import 'firebase_options.dart';
 import 'injection_container.dart';
 import 'main_app.dart';

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'package:provider/provider.dart';
 import '../Theme/app_theme.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 // import '../helper_function/image.dart';
 
 class UploadProfileImageWidget extends StatelessWidget {

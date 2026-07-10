@@ -109,7 +109,6 @@ flutter:
     - assets/lotties/
     - assets/fonts/
     - assets/languages/
-    - assets/audios/
     - assets/test/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

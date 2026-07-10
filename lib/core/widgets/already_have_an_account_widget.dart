@@ -1,22 +1,30 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-// import 'package:provider/provider.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../Theme/app_theme.dart';
 
-class AlreadyHaveAnAccountWidget extends StatelessWidget {
-  const AlreadyHaveAnAccountWidget({super.key});
+class DontHaveAnAccountWidget extends StatelessWidget {
+  final VoidCallback onTap;
+
+  const DontHaveAnAccountWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: GestureDetector(
-        onTap: () {
-          // context.read<LoginProvider>().goTo();
-        },
-        child: Text(
-          LanguageProvider.translate('signup', 'already_have_an_account'),
-          style: context.text.bodyMedium,
-        ),
+    return RichText(
+      text: TextSpan(
+        children: [
+          TextSpan(
+            text: LanguageProvider.translate('auth', 'already_have_an_account'),
+            style: context.text.bodyMedium,
+          ),
+          TextSpan(
+            text: LanguageProvider.translate('auth', 'login'),
+            style: context.text.bodyMedium!.copyWith(
+              color: context.colors.primary,
+            ),
+            recognizer: TapGestureRecognizer()..onTap = onTap,
+          ),
+        ],
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../features/language/presentation/provider/language_provider.dart';
+import '../../features/language/presentation/providers/language_provider.dart';
 import '../Theme/app_theme.dart';
 import '../constants/constants.dart';
 
