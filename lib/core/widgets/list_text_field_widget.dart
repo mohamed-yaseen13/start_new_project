@@ -109,6 +109,7 @@ class ListTextFieldWidget extends StatelessWidget {
             readOnly: input.readOnly,
             width: input.width,
             contentPadding: input.contentPadding,
+            onChange: input.onChange,
           );
         }),
       ),

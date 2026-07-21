@@ -19,13 +19,6 @@ String? validateEstateName(String? value) {
   return null;
 }
 
-String? validateBalance(String? value) {
-  if (value.isNullOrEmpty() || double.parse(value!) <= 0) {
-    return LanguageProvider.translate("validation", "balance");
-  }
-  return null;
-}
-
 String? validateArea(String? value) {
   if (value!.isEmpty) {
     return LanguageProvider.translate("validation", "area");
@@ -61,6 +54,27 @@ String? validatePhone(String? value) {
 String? validateName(String? value) {
   if (value!.isEmpty) {
     return LanguageProvider.translate("validation", "name");
+  }
+  return null;
+}
+
+String? validateDeliveryDate(String? value) {
+  if (value!.isEmpty) {
+    return LanguageProvider.translate("validation", "delivery_date_required");
+  }
+  return null;
+}
+
+String? validateRentPeriod(String? value) {
+  if (value!.isEmpty) {
+    return LanguageProvider.translate("validation", "rent_period_required");
+  }
+  return null;
+}
+
+String? validateDeliveryTime(String? value) {
+  if (value!.isEmpty) {
+    return LanguageProvider.translate("validation", "delivery_time_required");
   }
   return null;
 }
@@ -133,9 +147,23 @@ String? validateApartment(String? value) {
   return null;
 }
 
+String? validateAddressType(String? value) {
+  if (value!.isEmpty) {
+    return LanguageProvider.translate("validation", "address_type");
+  }
+  return null;
+}
+
 String? validateBuilding(String? value) {
   if (value!.isEmpty) {
     return LanguageProvider.translate("validation", "building");
+  }
+  return null;
+}
+
+String? validateFloor(String? value) {
+  if (value!.isEmpty) {
+    return LanguageProvider.translate("validation", "floor");
   }
   return null;
 }
@@ -150,6 +178,20 @@ String? validateAddressName(String? value) {
 String? validateStreetName(String? value) {
   if (value!.isEmpty) {
     return LanguageProvider.translate("validation", "street_name");
+  }
+  return null;
+}
+
+String? validateCityName(String? value) {
+  if (value!.isEmpty) {
+    return LanguageProvider.translate("validation", "city_name");
+  }
+  return null;
+}
+
+String? validateAreaName(String? value) {
+  if (value!.isEmpty) {
+    return LanguageProvider.translate("validation", "area_name");
   }
   return null;
 }
@@ -185,6 +227,13 @@ String? validateDate(String? value) {
 String? validateAdTitle(String? value) {
   if (value!.isEmpty) {
     return LanguageProvider.translate("validation", "ad_title");
+  }
+  return null;
+}
+
+String? validateBalance(String? value) {
+  if (value.isNullOrEmpty() || double.parse(value!) <= 0) {
+    return LanguageProvider.translate("validation", "balance");
   }
   return null;
 }

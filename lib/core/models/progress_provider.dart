@@ -11,7 +11,7 @@ class ProgressProvider extends ChangeNotifier {
   int total = 0;
 
   void setData(int sent, int total) {
-    if (total > 0) {
+    if (total > 100000) {
       this.sent = sent;
       this.total = total;
       notifyListeners();

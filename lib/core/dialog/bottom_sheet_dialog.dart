@@ -12,6 +12,7 @@ Future<void> bottomSheetDialog(Widget child) async {
           bottom: MediaQuery.of(bottomSheetContext).viewInsets.bottom,
         ),
         child: Container(
+          constraints: BoxConstraints(maxHeight: 0.7.sh, minHeight: 0.4.sh),
           decoration: BoxDecoration(
             color: Color(0xFFFCF9F8),
             borderRadius: BorderRadiusDirectional.vertical(

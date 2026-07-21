@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../features/language/presentation/providers/language_provider.dart';
-// import '../constants/app_images.dart';
-// import 'svg_widget.dart';
 
 class SeeAllWidget extends StatelessWidget {
   final String text;
   final bool? seeAll;
-  final VoidCallback onTap;
-  final bool isThereIcon;
+  final VoidCallback? onTap;
 
   const SeeAllWidget({
     super.key,
     required this.text,
     this.seeAll = true,
-    required this.onTap,
-    this.isThereIcon = false,
+    this.onTap,
   });
 
   @override
@@ -32,27 +27,14 @@ class SeeAllWidget extends StatelessWidget {
           ),
         ),
         if (seeAll == true)
-          GestureDetector(
+          InkWell(
             onTap: onTap,
-            child: isThereIcon
-                ? Row(
-                    children: [
-                      Text(
-                        LanguageProvider.translate("global", "see_all"),
-                        style: theme.textTheme.bodyMedium?.copyWith(
-                          color: Color(0xFF6B6056),
-                        ),
-                      ),
-                      SizedBox(width: 4.w),
-                      // SvgWidget(svg: AppImages.seeAllIcon),
-                    ],
-                  )
-                : Text(
-                    LanguageProvider.translate("global", "see_all"),
-                    style: theme.textTheme.bodyMedium?.copyWith(
-                      color: Color(0xFF6B6056),
-                    ),
-                  ),
+            child: Text(
+              LanguageProvider.translate("global", "see_all"),
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.primary,
+              ),
+            ),
           ),
       ],
     );

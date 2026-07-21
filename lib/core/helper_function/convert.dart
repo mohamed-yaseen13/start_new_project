@@ -55,6 +55,11 @@ String convertDateToStringYMD(DateTime dateTime) {
   return DateFormat('yyyy-M-d', 'en').format(dateTime);
 }
 
+//2024/04/15 en only
+String convertDateToStringYMD2(DateTime dateTime) {
+  return DateFormat('yyyy/M/d', 'en').format(dateTime);
+}
+
 String checkDateIfNull(dynamic dateTime) {
   return dateTime == "null" || dateTime == null
       ? ""
@@ -116,6 +121,23 @@ DateTime? convertStringToDateTime(String? dateString) {
         return null;
       }
     }
+  }
+}
+
+// "09:30" → "09:30 AM"
+String convertStringToTime(String? timeString) {
+  if (timeString == null || timeString.isEmpty) return '';
+  try {
+    final DateTime parsed = DateFormat('HH:mm', 'en').parse(timeString);
+    return DateFormat(
+      'hh:mm a',
+      Provider.of<LanguageProvider>(
+        Constants.globalContext(),
+        listen: false,
+      ).appLocal.languageCode,
+    ).format(parsed);
+  } catch (_) {
+    return timeString;
   }
 }
 
