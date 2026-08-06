@@ -1,3 +1,5 @@
+import 'package:start_new_project/core/constants/constants.dart';
+
 import '../../features/language/presentation/providers/language_provider.dart';
 import 'extensions.dart';
 
@@ -42,7 +44,7 @@ String? validatePhone(String? value) {
   if (value!.isEmpty) {
     return LanguageProvider.translate("validation", "phone_required");
   }
-  if (value.length < 10) {
+  if (value.length != Constants.phoneNumberLength) {
     return LanguageProvider.translate("validation", "phone_invalid");
   }
   if (validEnglish(value)) {

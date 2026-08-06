@@ -54,10 +54,10 @@ void main() async {
 
   SystemChrome.setSystemUIOverlayStyle(AppSystemUi.light());
 
-  await ApiHandel.getInstance.init();
 
   final language = LanguageProvider();
   await language.fetchLocale();
+  await ApiHandel.getInstance.init();
 
   runApp(MyApp(language: language));
 }

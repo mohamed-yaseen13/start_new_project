@@ -25,8 +25,6 @@ class CheckBoxWidget extends StatelessWidget {
       onTap: () => onChange(!check),
       borderRadius: BorderRadius.circular(8),
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 2.w),
-        padding: padding ?? EdgeInsets.all(0.5.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
@@ -37,8 +35,8 @@ class CheckBoxWidget extends StatelessWidget {
           ),
         ),
         child: Container(
-          width: width ?? 24.w,
-          height: height ?? 24.w,
+          width: width ?? 20.w,
+          height: height ?? 40.w,
           decoration: BoxDecoration(
             color: check ? colors.primary : Colors.white,
             borderRadius: BorderRadius.circular(6),

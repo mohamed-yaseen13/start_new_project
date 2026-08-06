@@ -18,4 +18,5 @@ class Constants {
   }
 
   static const String appFontFamily = 'Inter';
+  static const int phoneNumberLength = 10;
 }
