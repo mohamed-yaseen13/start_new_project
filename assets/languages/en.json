@@ -1,10 +1,15 @@
 {
-  "global": {},
+  "global": {
+    "error": "error",
+    "see_all": "See All"
+  },
   "onboarding": {},
   "auth": {},
   "buttons": {},
   "validation": {},
   "app_bar": {},
   "nav_bar": {},
-  "home": {}
+  "home": {},
+  "inputs": {},
+  "see_all": {}
 }
